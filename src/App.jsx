@@ -7,10 +7,10 @@ gsap.registerPlugin(ScrollTrigger, SplitText); //make sure plugins are ready to 
 
 function App() {
   return (
-    <main className="flex-center h-screen">
+    <main >
       <Navbar />
     </main>
   );
-}
+};
 
 export default App;
