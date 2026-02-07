@@ -31,6 +31,7 @@ const Navbar = () => {
         hasScrolled && "py-2 bg-black-100 backdrop-blur-sm",
       )}
     >
+      {/* mobile navbar */}
       <div className="container flex h-14 items-center max-lg:px-5">
         <a
           href="#home"
@@ -40,7 +41,7 @@ const Navbar = () => {
           <img
             src="/images/logo1.png"
             alt="logo"
-            className="rounded-full h-36"
+            className="rounded-full h-32"
             onClick={() => setIsOpen(false)}
           />
         </a>
@@ -93,6 +94,19 @@ const Navbar = () => {
             </nav>
           </div>
         </div>
+        {/* toggle menu button */}
+        <button
+          className="relative lg:hidden z-2 size-10 border-2 border-s4/25 rounded-full flex justify-center items-center"
+          onClick={() => setIsOpen((prevState) => !prevState)}
+        >
+          <img
+            className="size-1/2 object-contain"
+            alt="magic"
+            src={`/images/${isOpen ? "close" : "magic"}.svg`}
+            width={20}
+            height={20}
+          />
+        </button>
       </div>
     </header>
   );
