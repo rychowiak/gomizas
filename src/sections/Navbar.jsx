@@ -1,15 +1,41 @@
+import { useGSAP } from "@gsap/react";
 import { navLinks } from "../../constants";
+import gsap from "gsap";
 
 const Navbar = () => {
+  useGSAP(() => {
+    const navTween = gsap.timeline({
+      scrollTrigger: {
+        trigger: "nav",
+        start: "bottom top",
+      },
+    });
+
+    navTween.fromTo(
+      "nav",
+      { backgroundColor: "transparent" },
+      {
+        backgroundColor: "00000050",
+        backgroundFilter: "blur(10px)",
+        duration: 1,
+        ease: "power1.inOut",
+      },
+    );
+  });
+
   return (
     <nav className="">
       <div>
         <a href="#home">
-          <img src="images/logo1.png" alt="logo" className="size-32 rounded-full" />
+          <img
+            src="images/logo1.png"
+            alt="logo"
+            className="size-32 rounded-full"
+          />
         </a>
 
         <ul>
-          {navLinks.map(({id, title}) => (
+          {navLinks.map(({ id, title }) => (
             <li key={id}>
               <a href={`#${id}`}>{title}</a>
             </li>
