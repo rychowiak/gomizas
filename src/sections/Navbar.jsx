@@ -24,13 +24,13 @@ const Navbar = () => {
   });
 
   return (
-    <nav className="">
+    <nav>
       <div>
         <a href="#home">
           <img
             src="images/logo1.png"
             alt="logo"
-            className="size-32 rounded-full"
+            className="size-10 rounded-full"
           />
         </a>
 
