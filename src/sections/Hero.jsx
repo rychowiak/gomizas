@@ -33,8 +33,8 @@ const Hero = () => {
   }, []);
   return (
     <>
-      <div className="absolute w-full pointer-events-none ">
-        <img src="images/cover2_land.jpeg" className="block max-w-full" />
+      <div className="absolute pointer-events-none pb-28 ">
+        <img src="images/cover2_land.jpeg" className="block min-w-dvw" />
       </div>
       <section id="hero" className="">
         <h1 className="title">GOMIZAS</h1>

@@ -2,7 +2,7 @@ import { cocktailLists, mockTailLists } from "../../constants";
 
 const Gomitas = () => {
   return (
-    <section id="cocktails" className="noisy">
+    <section id="cocktails" className="noisy bg-white">
       <div className="list">
         <div className="popular">
           <h2>Most Popular</h2>
